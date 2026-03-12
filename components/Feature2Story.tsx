@@ -1,151 +1,347 @@
 import FadeIn from "@/components/ui/FadeIn";
 
-const patternAfterFight = [
-  "Vous vous excusez pour des choses dont vous n'êtes pas responsable",
-  "Vous analysez la dispute en boucle pour trouver comment vous auriez pu mieux faire",
-  "Vous marchez sur des œufs pendant des jours pour éviter une nouvelle tension",
-  "Quand il revient, vous êtes tellement soulagée que vous oubliez votre colère",
-  "Et le cycle recommence",
+const cycleSteps = [
+  "Il disparaissait. Aucune nouvelle pendant 3-4 jours.",
+  "Je paniquais. Je lui envoyais des messages. Je m'excusais (même quand je n'avais rien fait).",
+  "Il finissait par revenir avec : « J'ai eu besoin de réfléchir. Tu m'as blessé, mais je t'aime trop pour abandonner. »",
+  "Je ressentais un SOULAGEMENT biochimique. « Il est revenu. Il m'aime encore. »",
+  "On avait 1-2 semaines de « normalité ».",
+  "Puis une nouvelle dispute. Pour un détail. Une phrase mal interprétée. Un regard.",
+];
+
+const sacrifices = [
+  "J'ai petit à petit arrêté de voir mes amies assez souvent (il disait qu'ils « ne nous comprenaient pas »).",
+  "J'ai abandonné beaucoup de mes hobbies (il trouvait toujours que je ne passais pas assez de temps avec lui).",
+  "J'ai commencé à censurer mes propres pensées (« Est-ce que je peux dire ça sans qu'il le prenne mal ? »).",
+];
+
+const brainExcuses = [
+  "« Si je pars maintenant, tous mes efforts seront perdus. »",
+  "« Il a juste besoin de temps pour guérir ses blessures. »",
+  "« Je suis la seule qui le comprend vraiment. »",
 ];
 
 export default function Feature2Story() {
   return (
     <section className="bg-bg py-20 px-4">
       <div className="max-w-3xl mx-auto">
-        {/* Separator + intro */}
+
+        {/* Transition block */}
         <FadeIn>
+          <div className="text-center mb-16">
+            <p className="font-sans text-lg md:text-xl text-muted leading-relaxed mb-6">
+              Votre cerveau n&apos;est pas cassé, il est simplement mal configuré pour les environnements toxiques. Vous avez besoin d&apos;une mise à jour logicielle pour que votre câblage reprenne le contrôle.
+            </p>
+            <div className="w-12 h-px bg-gold/40 mx-auto mb-6" />
+            <p className="font-sans text-base text-cream font-medium leading-relaxed">
+              Continuez à lire encore un tout petit peu, et vous verrez que la méthode DBR est celle qui allie les 03 nécessités de votre cerveau.
+            </p>
+          </div>
+        </FadeIn>
+
+        {/* Séparateur */}
+        <FadeIn delay={0.05}>
           <div className="flex items-center gap-4 mb-12">
             <div className="flex-1 h-px bg-white/10" />
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold">
-              Mon histoire
-            </span>
+            <span className="font-sans text-xs uppercase tracking-[0.3em] text-gold flex-shrink-0">Présentation</span>
             <div className="flex-1 h-px bg-white/10" />
           </div>
         </FadeIn>
 
+        {/* Présentation */}
         <FadeIn delay={0.1}>
-          <p className="font-sans text-base text-muted leading-relaxed mb-8">
-            Mais avant tout, laissez moi me présenter. Je m&apos;appelle BreakYourCycle. Et non, ce n&apos;est pas un nom de marque. C&apos;est ce que j&apos;ai dû apprendre à faire — briser mon propre cycle — avant de pouvoir vous aider à briser le vôtre.
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-cream mb-6">
+            Mais avant tout, laissez moi rapidement me présenter
+          </h2>
+        </FadeIn>
+
+        <FadeIn delay={0.12}>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Je suis BreakYourCycle et j&apos;aide les INFJ/INFP qui sont piégés dans des schémas amoureux toxiques, à enfin les briser et avoir la connexion émotionnelle saine qu&apos;ils méritent avec un partenaire.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.14}>
+          <p className="font-sans text-base text-cream font-semibold leading-relaxed mb-12">
+            Pourquoi ? Lisez bien ce qui va suivre, vous vous reconnaitrez peut être :
           </p>
         </FadeIn>
 
         {/* Titre choc */}
-        <FadeIn delay={0.15}>
-          <h2 className="font-serif text-3xl md:text-5xl font-black text-cream text-center my-14 leading-tight">
-            MA DEUXIÈME RELATION<br />
-            <span className="text-negative">M&apos;A PRESQUE DÉTRUITE.</span>
+        <FadeIn delay={0.16}>
+          <h2 className="font-serif text-3xl md:text-5xl font-black text-negative text-center my-12 leading-tight">
+            MA DEUXIÈME RELATION M&apos;A PRESQUE DÉTRUITE.
           </h2>
         </FadeIn>
 
-        <FadeIn delay={0.2}>
-          <p className="font-sans text-base text-muted leading-relaxed mb-6">
-            Je l&apos;ai rencontré dans un café philosophique, un mardi soir de novembre. Il parlait de Sartre et de libre arbitre avec une intensité que je n&apos;avais jamais vue chez quelqu&apos;un. Il m&apos;a regardée de l&apos;autre côté de la table et a dit quelque chose que je n&apos;oublierai jamais :
+        <FadeIn delay={0.18}>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Et ce qui fait le plus mal, c&apos;est que j&apos;avais vu les signaux dès le début. Je les avais vus, analysés, rationalisés, puis ignorés. Parce que mon cerveau INFJ avait décidé que cette fois, c&apos;était différent.
+          </p>
+          <p className="font-sans text-base text-cream font-medium leading-relaxed mb-8">
+            Cette fois, c&apos;était &ldquo;la bonne personne&rdquo;.
           </p>
         </FadeIn>
 
-        {/* Citation partenaire */}
+        <FadeIn delay={0.2}>
+          <p className="font-sans text-base text-gold font-semibold mb-8">Laissez-moi vous raconter.</p>
+        </FadeIn>
+
+        {/* La rencontre */}
         <FadeIn delay={0.22}>
-          <div className="border-l-4 border-violet pl-6 py-3 my-8">
-            <p className="font-sans text-base italic text-cream leading-relaxed">
-              &ldquo;J&apos;ai l&apos;impression que tu es la seule personne dans cette pièce qui comprend vraiment ce dont je parle.&rdquo;
-            </p>
-          </div>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            On s&apos;est rencontrés lors d&apos;un événement commun. Il m&apos;a abordée avec une question profonde sur un sujet de philosophie.
+          </p>
+          <p className="font-sans text-sm text-muted/70 italic mb-2">Pas &ldquo;tu fais quoi dans la vie ?&rdquo; ou &ldquo;tu viens souvent ici ?&rdquo;.</p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-6">
+            Non. Une VRAIE conversation. Le genre que j&apos;adore / que j&apos;attendais depuis toujours / que les gens comme nous aiment/adorent.
+          </p>
         </FadeIn>
 
         <FadeIn delay={0.24}>
           <p className="font-sans text-base text-muted leading-relaxed mb-6">
-            Vous connaissez ce sentiment, n&apos;est-ce pas ? Quand quelqu&apos;un vous voit — vraiment vous voit — après des années à vous sentir incomprise. C&apos;était électrique. C&apos;était évident. C&apos;était le début de tout.
+            On a parlé pendant 4 heures. De tout. De nos blessures d&apos;enfance, de nos rêves, de ce qu&apos;on cherchait dans la vie.
           </p>
         </FadeIn>
 
         <FadeIn delay={0.26}>
-          <p className="font-sans text-base text-muted leading-relaxed mb-6">
-            Les trois premières semaines ont été comme vivre dans un film. Il m&apos;envoyait des messages à toute heure. Quinze messages certains matins, avant même que je me lève. Pas des messages banals — des pensées profondes, des questions sur ma vision du monde, des poèmes qu&apos;il écrivait à 3h du matin et qu&apos;il disait être pour moi.
-          </p>
-        </FadeIn>
-
-        <FadeIn delay={0.28}>
-          <p className="font-sans text-sm italic text-muted/70 text-center mb-8 mt-4">
-            — Spoiler alert : ils n&apos;étaient pas pour moi. —
-          </p>
-        </FadeIn>
-
-        {/* La chute */}
-        <FadeIn delay={0.3}>
-          <p className="font-sans text-base text-muted leading-relaxed mb-6">
-            Puis, quelques semaines plus tard, quelque chose a changé. Imperceptiblement d&apos;abord. Un commentaire sur ma façon de parler en public. Une remarque sur le livre que je lisais — &ldquo;un peu superficiel pour toi, non ?&rdquo; Une blague sur mon sens de l&apos;humour devant ses amis.
-          </p>
-        </FadeIn>
-
-        {/* Citation partenaire 2 */}
-        <FadeIn delay={0.32}>
           <div className="border-l-4 border-violet pl-6 py-3 my-8">
             <p className="font-sans text-base italic text-cream leading-relaxed">
-              &ldquo;Je pensais que tu étais plus forte que ça. Tu es trop sensible, c&apos;est un problème.&rdquo;
+              &ldquo;J&apos;ai l&apos;impression de te connaître depuis toujours. C&apos;est fou.&rdquo;
             </p>
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.34}>
+        <FadeIn delay={0.28}>
+          <p className="font-sans text-base text-cream font-medium leading-relaxed mb-6">
+            Enfin quelqu&apos;un qui me COMPREND.
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-8">
+            Il m&apos;a demandé mon numéro, puis m&apos;a envoyé 15 messages cette nuit-là (premier red flag que j&apos;ai ignoré). Des longs messages. Sur nous. Sur notre &ldquo;connexion spéciale&rdquo;.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.3}>
+          <div className="bg-bg-alt border border-white/10 rounded-xl px-6 py-4 mb-8">
+            <p className="font-sans text-sm italic text-muted leading-relaxed">
+              Mon cerveau a interprété ça comme : &ldquo;Il ressent la même intensité que moi. C&apos;est un signe.&rdquo;
+            </p>
+          </div>
+        </FadeIn>
+
+        {/* Love bombing */}
+        <FadeIn delay={0.32}>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Les 2 premiers mois ont été parfaits. Trop parfaits.
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Il m&apos;envoyait des messages toutes les heures. &ldquo;Tu me manques.&rdquo; &ldquo;Je pense à toi.&rdquo; &ldquo;Personne ne m&apos;a jamais comprise comme toi.&rdquo;
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Il voulait me voir tous les jours. Quand je disais que j&apos;avais besoin d&apos;une soirée seule, il répondait : &ldquo;Bien sûr, je comprends. Tu es tellement authentique.&rdquo;
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Après 3 semaines, il m&apos;a dit &ldquo;je t&apos;aime&rdquo;.
+          </p>
           <p className="font-sans text-base text-muted leading-relaxed mb-6">
-            J&apos;ai commencé à marcher sur des œufs. À surveiller mes mots. À analyser ses silences. À me demander ce que j&apos;avais dit de travers quand il devenait distant. La première vraie dispute a duré trois jours. Trois jours de silence total, de messages sans réponse, de nuits à fixer le plafond en me demandant si c&apos;était fini.
+            Après 6 semaines, il parlait de notre futur ensemble. Mariage. Enfants. La maison qu&apos;on achèterait.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.34}>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Mon entourage a commencé à dire : &ldquo;C&apos;est pas un peu rapide ?&rdquo; Et moi, j&apos;ai DÉFENDU la relation.
+          </p>
+          <div className="border-l-4 border-white/20 pl-6 py-2 my-6">
+            <p className="font-sans text-sm italic text-muted/80 leading-relaxed">
+              &ldquo;Vous ne comprenez pas. Notre connexion est différente. On n&apos;a pas besoin de jouer aux jeux stupides comme les autres couples.&rdquo;
+            </p>
+          </div>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Je me souviens avoir pensé : &ldquo;J&apos;ai trouvé mon âme sœur.&rdquo;
           </p>
         </FadeIn>
 
         <FadeIn delay={0.36}>
-          <p className="font-sans text-base text-muted leading-relaxed mb-6">
-            Puis il est revenu. Comme si rien ne s&apos;était passé. Et moi ? Voici ce que je faisais après chaque dispute :
+          <p className="font-sans text-sm italic text-muted/60 text-center my-8">
+            (Spoiler alert : Ce n&apos;était pas mon âme sœur. C&apos;était un Love Bombing classique. Mais je ne le savais pas encore.)
           </p>
         </FadeIn>
 
-        {/* Pattern après dispute */}
+        {/* La chute */}
         <FadeIn delay={0.38}>
-          <div className="bg-negative/10 border border-negative/20 rounded-xl p-6 my-8">
-            <ul className="flex flex-col gap-3">
-              {patternAfterFight.map((item, i) => (
-                <li key={i} className="flex gap-3 items-start font-sans text-sm text-cream/90">
-                  <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-negative mt-2" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Puis, quelque chose a changé. Subtilement d&apos;abord. Il a commencé à comparer. &ldquo;Mon ex cuisinait super bien.&rdquo; (Sous-texte : Toi, pas vraiment.)
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Il a commencé à critiquer mes amis. &ldquo;Je comprends pas pourquoi tu perds ton temps avec des gens aussi superficiels.&rdquo;
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-6">
+            Quand je parlais de mes projets, il écoutait à moitié, puis changeait de sujet pour parler de lui.
+          </p>
         </FadeIn>
 
         <FadeIn delay={0.4}>
-          <p className="font-sans text-base text-muted leading-relaxed mb-6">
-            Pendant dix-huit mois, j&apos;ai vécu dans cet état. Hypervigilante. Épuisée. Coupée de mes propres besoins. Convaincue que si j&apos;étais juste... assez bonne, assez patiente, assez compréhensive... les choses s&apos;arrangeraient.
+          <p className="font-sans text-base text-cream font-semibold leading-relaxed mb-6">
+            Et moi ? Je me demandais : &ldquo;Qu&apos;est-ce que j&apos;ai fait de mal ?&rdquo;
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            J&apos;ai commencé à surveiller son humeur. À adapter mon comportement. À être &ldquo;plus facile à vivre&rdquo;.
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            J&apos;annulais mes rendez-vous si je sentais qu&apos;il avait besoin de moi. Je cuisinais mieux. Je rigolais à ses blagues même quand elles n&apos;étaient pas drôles.
+          </p>
+          <p className="font-sans text-base text-cream font-medium mb-4">Je marchais sur des œufs.</p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-8">
+            Et je me disais : &ldquo;C&apos;est normal. Toutes les relations passent par une phase d&apos;adaptation.&rdquo;
           </p>
         </FadeIn>
 
+        {/* Première dispute */}
         <FadeIn delay={0.42}>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            La première grosse dispute est arrivée à cause de... rien. J&apos;avais répondu 2h en retard à son message parce que j&apos;étais en réunion.
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Il m&apos;a appelée 8 fois. Puis m&apos;a envoyé : &ldquo;C&apos;est clair que je ne suis pas ta priorité.&rdquo;
+          </p>
           <p className="font-sans text-base text-muted leading-relaxed mb-6">
-            C&apos;est ma meilleure amie qui a mis le doigt sur ce que je refusais de voir. On prenait un café, un samedi matin. Elle m&apos;a regardée et a dit, très calmement :
+            Quand je l&apos;ai rappelé, il a explosé.
           </p>
         </FadeIn>
 
         <FadeIn delay={0.44}>
-          <div className="border-l-4 border-gold pl-6 py-3 my-8">
-            <p className="font-sans text-lg italic text-cream leading-relaxed">
-              &ldquo;Je ne reconnais plus la personne que tu étais il y a deux ans. Toi non plus, je pense.&rdquo;
+          <div className="border-l-4 border-negative pl-6 py-3 my-8">
+            <p className="font-sans text-base italic text-cream leading-relaxed">
+              &ldquo;Tu es égoïste. Tu penses toujours à toi. Je fais TOUT pour cette relation et toi tu ne fais RIEN.&rdquo;
             </p>
           </div>
         </FadeIn>
 
-        {/* Pull quote */}
         <FadeIn delay={0.46}>
-          <div className="text-center my-14">
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            J&apos;étais sous le choc. C&apos;était la première fois qu&apos;il me parlait comme ça.
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-6">
+            Et vous devinez déjà ce que j&apos;ai fait…
+          </p>
+          <p className="font-sans text-base text-cream font-semibold mb-4">Je me suis excusée.</p>
+          <div className="border-l-4 border-white/20 pl-6 py-2 mb-8">
+            <p className="font-sans text-sm italic text-muted/80 leading-relaxed">
+              &ldquo;Tu as raison. Je suis désolée. J&apos;aurais dû te prévenir. Ça ne se reproduira plus.&rdquo;
+            </p>
+          </div>
+          <p className="font-sans text-base text-muted leading-relaxed mb-8">
+            Après cette dispute, il est redevenu gentil pendant quelques jours. Et moi, j&apos;ai cru que &ldquo;la crise était passée&rdquo;.
+          </p>
+        </FadeIn>
+
+        {/* Le cycle */}
+        <FadeIn delay={0.48}>
+          <p className="font-sans text-base text-cream font-semibold mb-5">
+            Après chaque dispute, le même schéma :
+          </p>
+          <div className="bg-negative/10 border border-negative/20 rounded-xl p-6 mb-8">
+            <ol className="flex flex-col gap-3">
+              {cycleSteps.map((step, i) => (
+                <li key={i} className="flex gap-3 items-start font-sans text-sm text-cream/90 leading-relaxed">
+                  <span className="flex-shrink-0 font-bold text-negative mt-0.5">{i + 1}.</span>
+                  {step}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.5}>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Chaque fois, je me disais : &ldquo;Cette fois, c&apos;est la dernière. Je vais faire plus attention.&rdquo;
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-8">
+            Chaque fois, je sacrifiais un peu plus de moi-même.
+          </p>
+        </FadeIn>
+
+        {/* Les sacrifices */}
+        <FadeIn delay={0.52}>
+          <ul className="flex flex-col gap-3 mb-10">
+            {sacrifices.map((item, i) => (
+              <li key={i} className="flex gap-3 items-start font-sans text-sm text-muted leading-relaxed">
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-muted/40 mt-2" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </FadeIn>
+
+        {/* Réveil */}
+        <FadeIn delay={0.54}>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Après 18 mois dans ce cycle, ma meilleure amie m&apos;a dit :
+          </p>
+          <div className="border-l-4 border-gold pl-6 py-3 my-8">
+            <p className="font-sans text-base italic text-cream leading-relaxed">
+              &ldquo;Tu sais que tu n&apos;es plus la même personne, hein ? Tu ne ris plus. Tu es toujours stressée. Tu vérifies ton téléphone toutes les 2 minutes. Ce n&apos;est pas de l&apos;amour, ça.&rdquo;
+            </p>
+          </div>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Je me suis défendue (comme toujours).
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-8">
+            Mais cette nuit-là, je n&apos;ai pas dormi.
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-8">
+            Parce que j&apos;ai réalisé quelque chose de terrifiant :
+          </p>
+        </FadeIn>
+
+        {/* Pull quote */}
+        <FadeIn delay={0.56}>
+          <div className="text-center my-12">
             <p className="font-serif text-2xl md:text-3xl font-bold text-cream italic leading-tight max-w-2xl mx-auto">
               &ldquo;Je ne reconnaissais plus la personne que j&apos;étais devenue.&rdquo;
             </p>
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.48}>
+        <FadeIn delay={0.58}>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            J&apos;avais 31 ans. J&apos;étais épuisée. Anxieuse. Je me sentais coupable en permanence même quand je n&apos;avais rien fait.
+          </p>
           <p className="font-sans text-base text-muted leading-relaxed mb-6">
-            J&apos;avais 31 ans. Et pour la première fois, j&apos;ai regardé en face le fait que ce n&apos;était pas une malchance. Ce n&apos;était pas juste lui. C&apos;était un pattern. C&apos;était mon pattern. Et il était temps de comprendre pourquoi.
+            Et je restais. Pourquoi ?
+          </p>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Parce que mon cerveau me disait :
           </p>
         </FadeIn>
+
+        <FadeIn delay={0.6}>
+          <ul className="flex flex-col gap-3 mb-8">
+            {brainExcuses.map((item, i) => (
+              <li key={i} className="flex gap-3 items-start font-sans text-sm text-muted italic leading-relaxed">
+                <span className="flex-shrink-0 text-gold">—</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </FadeIn>
+
+        <FadeIn delay={0.62}>
+          <p className="font-serif text-lg md:text-xl font-bold text-cream leading-relaxed mb-10">
+            J&apos;étais prisonnière non pas de lui, mais de mon propre câblage cognitif.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.64}>
+          <p className="font-sans text-base text-muted leading-relaxed mb-4">
+            Quand j&apos;ai finalement eu le courage de partir (après une 6ème rupture/réconciliation), je suis tombée dans un trou noir.
+          </p>
+          <p className="font-sans text-base text-cream font-semibold leading-relaxed">
+            Pas de tristesse romantique. Non.
+          </p>
+        </FadeIn>
+
       </div>
     </section>
   );

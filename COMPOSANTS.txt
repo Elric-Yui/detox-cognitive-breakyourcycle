@@ -1,0 +1,112 @@
+LISTE DES COMPOSANTS — PAGE DE VENTE DÉTOX COGNITIVE
+=====================================================
+
+Tous les fichiers texte sont dans : detox-app/components/
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Feature1Hero.tsx
+   Contenu : Section d'accroche et de légitimation scientifique
+   ─────────────────────────────────────────────────
+   - Titre hero : "Votre cerveau n'est pas cassé. Il est mal calibré."
+   - Sous-titre intro méthode DBR
+   - Introduction empathique ("Si vous êtes ici...")
+   - 5 douleurs INFJ/INFP (bullets)
+   - "Ce n'est pas votre faute."
+   - Citation scientifique Acevedo et al. 2014 (neurones miroirs)
+   - Critique des 3 solutions qui échouent :
+       · Thérapie Classique
+       · Self-Help Généraliste
+       · Coaching en Ligne
+   - 3 éléments cruciaux :
+       · 01 — Synthèse Globale
+       · 02 — Cohérence Interne
+       · 03 — Sortie de Boucle
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. Feature2Story.tsx
+   Contenu : Récit narratif personnel de BreakYourCycle
+   ─────────────────────────────────────────────────
+   - Présentation de BreakYourCycle
+   - Titre choc : "MA DEUXIÈME RELATION M'A PRESQUE DÉTRUITE."
+   - Récit : la rencontre (café philosophique, Sartre)
+   - Citations du partenaire (bordure violette)
+   - La chute : critiques subtiles, marcher sur des œufs
+   - Le pattern après chaque dispute (liste rouge)
+   - La remarque de la meilleure amie
+   - Pull quote final : "Je ne reconnaissais plus la personne que j'étais devenue."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. Feature3Mechanism.tsx
+   Contenu : Explication mécanique du cycle + présentation DBR
+   ─────────────────────────────────────────────────
+   - L'analyse : 4 mois de recherche, ressources étudiées
+   - Les 5 Failles cognitives INFJ/INFP :
+       · Faille #1 — Ni (Intuition Introvertie) : potentiel vs réalité
+       · Faille #2 — Fe (Sentiment Extraverti) : absorption émotions
+       · Faille #3 — Ti (Pensée Introvertie) : rationalisation
+       · Faille #4 — Se (Sensation Extravertie) : signaux physiques ignorés
+       · Faille #5 — Ni (Besoin de Sens) : rester pour le "sens"
+   - "Ces 5 failles ne sont PAS des défauts."
+   - 3 besoins pour sortir : IDENTIFIER / DOCUMENTER / VISUALISER
+   - Cartographie des 7 phases du cycle (Phase 0 → 6 → retour Phase 2)
+   - Résultats 6 mois après (bullets verts)
+   - Présentation de la méthode DBR
+   - 5 bases scientifiques : Young, Jung/Nardi, Skinner, Levine, Carnes
+   - Stat : "200+ heures condensées en 3-4h"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. Feature4Offer.tsx
+   Contenu : Présentation du produit et offre commerciale
+   ─────────────────────────────────────────────────
+   - Titre produit : "DÉTOX COGNITIVE — Diagnostic et Recalibrage pour INFJ/INFP"
+   - Pas pour vous si... (4 critères, rouge)
+   - Pour vous si... (4 critères, vert)
+   - 4 témoignages : Mariane / Daisy / Cynthia / Soraya
+   - Ce que ce n'est PAS / Ce que c'est (2 colonnes)
+   - Phase 1 — 5 composants détaillés :
+       · 01 — Test de Profil Cognitif Approfondi (valeur 27€)
+       · 02 — La Matrice des Patterns Relationnels (valeur 19€)
+       · 03 — Le Journal de Patterns Guidé (valeur 17€)
+       · 04 — La Cartographie des 7 Phases (valeur 15€)
+       · 05 — Rapport d'Auto-Diagnostic Personnalisé (valeur 29€)
+   - Phase 2 : Protocole de Rupture du Cycle
+   - Phase 3 : Reconstruction & Recalibrage
+   - Bonus : Bibliothèque de Ressources
+   - Tableau valeur totale → 107€
+   - Prix : ~~107€~~ → 47€ + badge "PRIX SPÉCIAL MAINTENANT"
+   - Rareté : "SEULEMENT 50 PLACES DISPONIBLES"
+   - Bouton CTA Whop principal
+   - Garantie 14 jours légal
+   - Garantie de résultat BreakYourCycle
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. Feature5Choice.tsx
+   Contenu : Choix final, FAQ et footer
+   ─────────────────────────────────────────────────
+   - CHOIX #1 (rouge) : Fermer la page → scénario négatif
+   - CHOIX #2 (vert) : Cliquer → scénario positif
+   - Le Futur 18 mois après (6 bullets verts)
+   - CTA intermédiaire + "Le choix vous appartient."
+   - 5 étapes du processus post-achat (clic → checkout → email → téléchargement → phases)
+   - FAQ Accordion — 6 questions :
+       · Q1 — "Je suis trop cassée pour que ça marche ?"
+       · Q2 — "Différence avec les livres sur les narcissiques ?"
+       · Q3 — "Et si mon partenaire n'est pas toxique ?"
+       · Q4 — "Pourquoi quelques heures vs des années de thérapie ?"
+       · Q5 — "47€ c'est cher pour un PDF ?"
+       · Q6 — "Et si je n'arrive quand même pas à sortir ?"
+   - CTA final grand format
+   - Footer : références scientifiques (5 études) + contact@breakyourcycle.com
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+COMPOSANTS UI (pas de texte éditorial, logique seulement)
+─────────────────────────────────────────────────────
+- components/ui/CTAButton.tsx   → Bouton Whop réutilisable
+- components/ui/Accordion.tsx   → FAQ animée (Framer Motion)
+- components/ui/FadeIn.tsx      → Wrapper animation scroll
