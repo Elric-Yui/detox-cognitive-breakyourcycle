@@ -1,6 +1,6 @@
 "use client";
 
-const WHOP_URL = "https://whop.com/checkout/plan_579QNJsiFPPl9";
+const WHOP_URL = "/checkout";
 
 interface CTAButtonProps {
   label?: string;
@@ -23,8 +23,6 @@ export default function CTAButton({
   return (
     <a
       href={WHOP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
       className={`${base} ${sizeStyles} bg-violet hover:bg-violet-light hover:shadow-[0_0_20px_rgba(201,168,76,0.4)] active:scale-95 ${className}`}
     >
       {label}
