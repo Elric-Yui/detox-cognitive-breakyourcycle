@@ -5,9 +5,10 @@
 Page de vente longue-form haute conversion pour le produit **"DÉTOX COGNITIVE : Diagnostic et Recalibrage pour INFJ/INFP"** de la marque **BreakYourCycle**.
 
 - **Produit vendu via** : Whop — `https://whop.com/checkout/plan_579QNJsiFPPl9`
-- **Prix affiché** : 47€ (barré 107€)
+- **Prix affiché** : 47€ (barré 117€ — valeur totale réelle)
 - **Langue** : Français uniquement
 - **Dev server** : `npm run dev` → `http://localhost:3000`
+- **GitHub** : `https://github.com/Elric-Yui/detox-cognitive-breakyourcycle`
 
 ---
 
@@ -19,7 +20,7 @@ Page de vente longue-form haute conversion pour le produit **"DÉTOX COGNITIVE :
 | Styling | Tailwind CSS |
 | Animations | Framer Motion (scroll-triggered) |
 | Fonts | Playfair Display (titres) + Inter (corps) via Google Fonts |
-| Hébergement cible | Vercel / Netlify |
+| Hébergement | Netlify (déployé) |
 
 ---
 
@@ -32,9 +33,9 @@ detox-app/
 │   ├── layout.tsx            ← Meta SEO, Google Fonts (Playfair + Inter), html lang="fr"
 │   └── globals.css           ← Variables CSS palette, reset, scrollbar custom
 ├── components/
-│   ├── Feature1Hero.tsx      ← Hero + empathie + science (Acevedo 2014) + 3 éléments
-│   ├── Feature2Story.tsx     ← Récit narratif (relation toxique de BreakYourCycle)
-│   ├── Feature3Mechanism.tsx ← 5 failles cognitives + 7 phases + bases scientifiques DBR
+│   ├── Feature1Hero.tsx      ← Hero + empathie + science + 3 éléments cruciaux
+│   ├── Feature2Story.tsx     ← Transition DBR + story complète BreakYourCycle
+│   ├── Feature3Mechanism.tsx ← 5 failles + 7 phases + bases scientifiques + présentation DBR
 │   ├── Feature4Offer.tsx     ← Produit + témoignages + prix + CTA + garanties
 │   ├── Feature5Choice.tsx    ← 2 choix + futur + FAQ accordion + footer CTA
 │   └── ui/
@@ -44,8 +45,10 @@ detox-app/
 ├── public/
 │   └── images/
 │       └── og-image.png      ← Placeholder (à remplacer par une vraie image OG)
+├── COMPOSANTS.txt            ← Guide de navigation des fichiers par section
 ├── tailwind.config.ts
-├── next.config.ts
+├── next.config.mjs
+├── netlify.toml              ← Config déploiement Netlify (Node 18 + plugin Next.js)
 └── CLAUDE.md                 ← Ce fichier
 ```
 
@@ -67,55 +70,79 @@ detox-app/
 
 ---
 
-## Structure narrative (5 Features)
+## État actuel de chaque section (session 2)
 
-La page suit exactement les 5 sections définies dans `../prdr.md` :
+### Feature 1 — Hero & Accroche (`Feature1Hero.tsx`) ✅ Révisée
+- Titre : "INFJ/INFP : Votre Cerveau N'est Pas Cassé. Il Est Mal Calibré Pour Les Relations Toxiques."
+- Sous-titre : méthode DBR méconnue mais scientifique
+- Intro empathique : référence au quiz passé, "vous êtes au bon endroit"
+- Titre intermédiaire : "Si vous êtes ici, c'est pour une bonne raison."
+- 5 pain points mis à jour (aimant narcissique, vidée, limites, culpabilité, seule)
+- Transition : "Mais laissez moi vous dire quelque chose..."
+- "Ce n'est pas votre faute" + "Votre cerveau INFP/INFJ est juste câblé différemment"
+- Citation Acevedo 2014 + texte absorption + "C'est pour ça que vous absorbez tout..."
+- Section : "C'est dérangeant, n'est ce pas ?" → critique 3 solutions
+- Texte post-solutions : culpabilité de performer la guérison + éléments manquants
+- 3 éléments cruciaux avec références scientifiques (Nardi, Tresna, Jung/Grant)
+- Texte de clôture : "mise à jour logicielle" + invitation à continuer
 
-### Feature 1 — Hero & Accroche Scientifique (`Feature1Hero.tsx`)
-- Hero avec titre doré Playfair + placeholder image 16:9
-- 5 douleurs INFJ/INFP (bullets fond contrasté)
-- "Ce n'est pas votre faute" centré doré
-- Citation étude Acevedo et al. 2014 (neurones miroirs)
-- Critique des 3 solutions échouées (Thérapie, Self-Help, Coaching) — cards rouge
-- 3 éléments cruciaux numérotés (Synthèse Globale, Cohérence Interne, Sortie de Boucle)
+### Feature 2 — Story (`Feature2Story.tsx`) ✅ Révisée
+- Bloc transition DBR ("Votre cerveau n'est pas cassé...")
+- Présentation BreakYourCycle + accroche "Pourquoi ?"
+- Story complète : rencontre, love bombing (15 messages), chute, 6 phases de cycle,
+  sacrifices, réveil via amie, "je ne reconnaissais plus la personne que j'étais devenue"
+- Section se termine sur : "Pas de tristesse romantique. Non." → laisse le lecteur suspendu
 
-### Feature 2 — Récit de la Destruction (`Feature2Story.tsx`)
-- Présentation BreakYourCycle
-- Titre choc : "MA DEUXIÈME RELATION M'A PRESQUE DÉTRUITE."
-- Narration séquentielle avec citations partenaire (bordure violette gauche)
-- Pattern après dispute (liste bullets fond rouge sombre)
-- Pull quote final
-
-### Feature 3 — Le Déclic et les 5 Failles (`Feature3Mechanism.tsx`)
-- 4 mois de recherche, constat du vide en français
-- 5 failles cognitives (Ni/Fe/Ti/Se/Ni) — format mécanisme → conséquence
+### Feature 3 — Mécanisme (`Feature3Mechanism.tsx`) ✅ Révisée
+- Titre : "Une obsession de comprendre"
+- Question centrale : "POURQUOI retournée 6 fois ?"
+- 4 mois de recherche (6 sources, 99% en anglais)
+- Bloc déclic : interaction câblage INFJ + stratégie manipulation
+- 5 failles cognitives (Ni/Fe/Ti/Se/Ni) — mécanisme → conséquence
+- Pas des défauts, des vulnérabilités structurelles exploitées
 - 3 besoins : IDENTIFIER / DOCUMENTER / VISUALISER
-- Cartographie des 7 phases du cycle (Phase 0 à 6 + retour Phase 2)
-- Résultats 6 mois après (bullets verts)
-- Présentation DBR + 5 bases scientifiques (Young, Jung/Nardi, Skinner, Levine, Carnes)
-- Stat "200+ heures → 3-4h"
+- 7 phases du cycle (cartographie visuelle timeline)
+- Résultats 6 mois : tableau "avant → après" (intensité/potentiel/connexion)
+- Transition : "Comment tu as fait EXACTEMENT ?"
+- Présentation DBR + 5 bases scientifiques + 200h condensées en 3-4h
 
-### Feature 4 — Produit et Offre (`Feature4Offer.tsx`)
-- Titre produit + mockup livret (placeholder violet/gold)
-- Pas pour vous (✗ rouge) / Pour vous (✓ vert) — 2 colonnes
-- 4 témoignages (Mariane, Daisy, Cynthia, Soraya) — cards fond bg
-- Ce que ce n'est PAS / Ce que c'est — 2 colonnes
-- Phase 1 : 5 composants numérotés avec valeur individuelle
-- Phase 2 + Phase 3 + Bonus — 3 mini-cards
-- Tableau valeur totale → 107€
-- Bloc prix : ~~107€~~ → **47€** + badge "PRIX SPÉCIAL"
-- Rareté : "SEULEMENT 50 PLACES DISPONIBLES" (fond rouge)
-- CTA Whop principal
-- Double garantie : 14 jours légal + Garantie résultat BreakYourCycle
+### Feature 4 — Offre (`Feature4Offer.tsx`) ✅ Révisée
+- Label : "Je vous présente"
+- Titre produit + mockup + description DBR
+- Titre section : "Attention 💔 : CE MANUEL N'EST PAS POUR TOUT LE MONDE."
+- Critères mis à jour (4 ✗ / 4 ✓)
+- Intro témoignages : "méthode validée par des centaines de femmes"
+- 4 témoignages reformatés (Mariane 34 INFJ / Daisy 28 INFP / Cynthia 41 INFJ / Soraya 31 INFP)
+- Section "Ce que c'est / Ce n'est pas" : 3 ❌ rouges + séparateur + 3 ✅ verts
+- Texte exclusivité INFJ/INFP avant composants
+- Titre section composants : "Ce qui sera fait dans DETOX COGNITIVE..."
+- Phase 1 en sous-titre doré
+- 5 composants mis à jour (noms + descriptions exacts + valeurs en gold) :
+  - 01 — Test de Profil Cognitif Relationnel (12€)
+  - 02 — Matrice de Vulnérabilité (10€)
+  - 03 — Journal de Patterns (15€)
+  - 04 — Cartographie du Cycle Toxique (10€)
+  - 05 — Rapport d'Auto Diagnostic (10€)
+- "Ce n'est que la phase 1. Vous aurez également accès à :"
+- Phase 2 — Déconstruction de l'Attachement (25€)
+- Phase 3 — Reconstruction & Nouveaux Filtres (20€)
+- Bonus — Recalibrage à Vie (15€)
+- Tableau valeur : Phase 1 (57€) + Phase 2 (25€) + Phase 3 (20€) + Bonus (15€) = **117€**
+- Accroche prix : "Je pourrais maintenir à 107€..."
+- Titre : "UN PRIX SPÉCIAL POUR UNIQUEMENT MAINTENANT"
+- Box transparence early adopteuse :
+  - ✅ Phase 1 immédiate (80 pages) avec liste des 5 composants
+  - ✅ Phases 2-3 & bonus sous 30 jours
+  - ✅ Feedback VIP
+  - Note garantie remboursement si délai non tenu
+  - Bloc doré : 30% réduction → **47€ maintenant et uniquement maintenant**
+- Box prix : ~~117€~~ → **47€**
+- Rareté : 50 places
+- CTA Whop
+- Double garantie (14j légal + résultat)
 
-### Feature 5 — Choix Final et FAQ (`Feature5Choice.tsx`)
-- 2 choix : CHOIX #1 rouge (fermer) vs CHOIX #2 vert (cliquer)
-- Futur 18 mois — 6 bullets verts
-- CTA intermédiaire + "Le choix vous appartient"
-- 5 étapes du processus post-achat
-- FAQ Accordion — 6 questions (Trop cassée, Livres narcissiques, Partenaire pas toxique, Thérapie vs heures, Prix, Garantie)
-- CTA final centré grand format
-- Footer : références scientifiques + contact@breakyourcycle.com
+### Feature 5 — Choix Final & FAQ (`Feature5Choice.tsx`) ⏳ Non révisée
+- Structure initiale en place, textes à réviser dans session future
 
 ---
 
@@ -125,7 +152,6 @@ La page suit exactement les 5 sections définies dans `../prdr.md` :
 ```tsx
 <CTAButton label="..." size="lg" | "sm" className="..." />
 // Lien hardcodé : https://whop.com/checkout/plan_579QNJsiFPPl9
-// Hover : bg-violet-light + shadow dorée
 ```
 
 ### `FadeIn`
@@ -141,7 +167,6 @@ La page suit exactement les 5 sections définies dans `../prdr.md` :
 ```tsx
 <Accordion items={[{ question: "...", answer: "..." }]} />
 // Un seul item ouvert à la fois (openIndex state)
-// AnimatePresence height 0→auto
 ```
 
 ---
@@ -149,29 +174,47 @@ La page suit exactement les 5 sections définies dans `../prdr.md` :
 ## Commandes
 
 ```bash
-# Développement
 npm run dev        # http://localhost:3000
-
-# Build production
-npm run build      # Vérifie TypeScript + génère static
-
-# Preview build
-npm run start
+npm run build      # Vérification TypeScript + build statique
+npm run start      # Preview du build
 ```
 
 ---
 
-## TODO / Améliorations futures
+## Déploiement Netlify
 
-- [ ] Remplacer les placeholders SVG par de vraies images (hero, mockup livre, badge garantie, og-image)
-- [ ] Ajouter `metadataBase` dans `layout.tsx` pour les OG images en production
-- [ ] Intégrer un vrai compteur de places disponibles (si dynamique via API Whop)
+- **Repo** : `Elric-Yui/detox-cognitive-breakyourcycle` (branche `master`)
+- **Base directory** : `detox-app`
+- **Build command** : `npm run build`
+- **Publish directory** : `.next`
+- **Plugin** : `@netlify/plugin-nextjs` (installé en devDependency)
+- **Node** : 18 (spécifié dans `netlify.toml`)
+- **Variable d'env à maintenir** : `NEXT_PUBLIC_SITE_URL` = URL Netlify du site
+- **Redirection post-paiement** : 100% client-side (`skipRedirect + onComplete → router.push("/merci")`) — pas de `returnUrl` Whop à configurer
+
+---
+
+## TODO prioritaires pour la prochaine session
+
+- [ ] **Feature5Choice.tsx** — réviser tous les textes (choix final, futur 18 mois, FAQ, footer)
+- [ ] Remplacer les placeholders images (hero 16:9, mockup livre, og-image)
+- [ ] Mettre à jour le prix barré dans Feature5 (était 107€, maintenant 117€)
+- [ ] Vérifier cohérence des prix sur toute la page (47€ / 117€ barré)
+- [ ] Tester responsive mobile (375px, 768px, 1280px)
 - [ ] Ajouter Google Analytics / Meta Pixel si besoin
-- [ ] Tester sur mobile 375px, 768px, 1280px
-- [ ] Ajouter une barre de progression de lecture sticky (optionnel)
+
+---
+
+## Contexte produit important
+
+- **Positionnement** : Seul guide en français qui connecte MBTI + relations toxiques de manière clinique
+- **Cible** : Femmes INFJ/INFP ayant passé un quiz sur les mécanismes cognitifs
+- **Méthode DBR** : Diagnostiquer — Briser — Reconstruire
+- **Early adopteuses** : Phases 2, 3 et Bonus livrés sous 30 jours — si non respecté : remboursement intégral + Phase 1 offerte
+- **Ton** : Clinique, factuel, pas de "self-love" vague — diagnostic précis et chirurgical
 
 ---
 
 ## Source du contenu
 
-Le contenu narratif suit exactement le PDF de vente original. La structure des 5 Features est documentée dans `../prdr.md` (à la racine du dossier parent `PAGE DE VENTE DETOX/`).
+Structure des 5 Features dans `../prdr.md`. Le contenu narratif (story, failles, mécanismes) vient de l'expérience personnelle de BreakYourCycle enrichie de 5 frameworks scientifiques.

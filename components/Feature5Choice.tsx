@@ -15,7 +15,7 @@ const nextSteps = [
   {
     num: "01",
     title: "Vous cliquez sur le bouton",
-    desc: "Vous êtes redirigée vers la page de paiement sécurisé Whop.",
+    desc: "Vous êtes redirigée vers la page de paiement sécurisé.",
   },
   {
     num: "02",
@@ -136,6 +136,50 @@ export default function Feature5Choice() {
         </div>
       </div>
 
+      {/* DEUX FUTURS */}
+      <div className="bg-bg-alt py-20 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <FadeIn>
+            <h2 className="font-serif text-3xl md:text-4xl font-black text-cream mb-12">
+              ALORS, LEQUEL DE CES DEUX FUTURS <span className="text-gold">VOULEZ-VOUS ?</span>
+            </h2>
+          </FadeIn>
+
+          <div className="flex flex-col md:flex-row gap-4 mb-10">
+            {/* Choix 1 */}
+            <FadeIn delay={0.1} className="flex-1">
+              <div className="bg-negative/10 border border-negative/30 rounded-2xl p-6 h-full text-left">
+                <p className="font-serif text-base font-bold text-negative mb-3">Choix #1</p>
+                <p className="font-sans text-sm text-muted leading-relaxed">
+                  Vous fermez cette page et vous retombez dans le même cycle dans <span className="text-cream font-semibold">6 mois</span>.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Choix 2 */}
+            <FadeIn delay={0.2} className="flex-1">
+              <div className="bg-positive/10 border border-positive/30 rounded-2xl p-6 h-full text-left">
+                <p className="font-serif text-base font-bold text-positive mb-3">Choix #2</p>
+                <p className="font-sans text-sm text-muted leading-relaxed">
+                  Vous prenez le workbook pour <span className="text-cream font-semibold">recalibrer votre système de navigation à vie</span>.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.3}>
+            <p className="font-serif text-lg text-cream font-semibold mb-8">
+              Le choix vous appartient.
+            </p>
+            <CTAButton
+              label="Obtenir mon guide"
+              size="lg"
+              className="mx-auto justify-center"
+            />
+          </FadeIn>
+        </div>
+      </div>
+
       {/* FUTUR 18 MOIS */}
       <div className="bg-bg py-20 px-4">
         <div className="max-w-3xl mx-auto">
@@ -241,7 +285,7 @@ export default function Feature5Choice() {
               className="mb-4"
             />
             <p className="font-sans text-xs text-muted mt-4">
-              Garantie 14 jours • Accès immédiat • 50 places disponibles
+              Garantie 14 jours • Garantie résultat ou remboursé • Accès immédiat • 50 places disponibles
             </p>
           </FadeIn>
         </div>
@@ -268,7 +312,7 @@ export default function Feature5Choice() {
 
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-8 border-t border-white/8">
             <p className="font-sans text-xs text-muted/50">
-              © 2024 BreakYourCycle. Tous droits réservés.
+              © 2026 BreakYourCycle. Tous droits réservés.
             </p>
             <a
               href="mailto:contact@breakyourcycle.com"
