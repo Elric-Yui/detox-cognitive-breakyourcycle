@@ -17,6 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+  ),
   title: "DÉTOX COGNITIVE : Diagnostic et Recalibrage pour INFJ/INFP | BreakYourCycle",
   description:
     "La méthode DBR pour INFJ/INFP : identifiez vos failles cognitives et sortez définitivement de vos schémas amoureux toxiques. 47€ — 50 places.",
