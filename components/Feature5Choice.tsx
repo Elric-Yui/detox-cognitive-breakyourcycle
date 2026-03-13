@@ -137,7 +137,7 @@ export default function Feature5Choice() {
       </div>
 
       {/* DEUX FUTURS */}
-      <div className="bg-bg-alt py-20 px-4">
+      <div className="bg-bg py-20 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <FadeIn>
             <h2 className="font-serif text-3xl md:text-4xl font-black text-cream mb-12">
@@ -181,7 +181,7 @@ export default function Feature5Choice() {
       </div>
 
       {/* FUTUR 18 MOIS */}
-      <div className="bg-bg py-20 px-4">
+      <div className="bg-bg-alt py-20 px-4">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-cream mb-8">
@@ -219,7 +219,7 @@ export default function Feature5Choice() {
       </div>
 
       {/* CE QUI SE PASSE ENSUITE */}
-      <div className="py-20 px-4 bg-bg-alt">
+      <div className="py-20 px-4 bg-bg">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-cream text-center mb-12">
@@ -250,7 +250,7 @@ export default function Feature5Choice() {
       </div>
 
       {/* FAQ */}
-      <div className="bg-bg py-20 px-4">
+      <div className="bg-bg-alt py-20 px-4">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-cream text-center mb-12">
@@ -265,7 +265,7 @@ export default function Feature5Choice() {
       </div>
 
       {/* CTA FINAL */}
-      <div className="bg-bg-alt py-24 px-4 text-center">
+      <div className="bg-bg py-24 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <FadeIn>
             <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold mb-6">

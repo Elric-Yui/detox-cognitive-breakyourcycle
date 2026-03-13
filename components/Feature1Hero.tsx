@@ -150,7 +150,7 @@ export default function Feature1Hero() {
       </div>
 
       {/* TRANSITION */}
-      <div className="py-10 px-4 text-center">
+      <div className="py-20 px-4 text-center">
         <FadeIn>
           <p className="font-sans text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
             Mais laissez moi vous dire quelque chose que personne ne vous a probablement jamais déjà dit :
@@ -159,7 +159,7 @@ export default function Feature1Hero() {
       </div>
 
       {/* CE N'EST PAS VOTRE FAUTE */}
-      <div className="py-16 px-4 text-center">
+      <div className="py-20 px-4 text-center">
         <FadeIn>
           <p className="font-serif text-3xl md:text-4xl font-bold text-gold max-w-2xl mx-auto leading-tight">
             Ce n&apos;est pas votre faute.
@@ -171,7 +171,7 @@ export default function Feature1Hero() {
       </div>
 
       {/* SCIENCE */}
-      <div className="bg-bg-alt py-16 px-4">
+      <div className="bg-bg-alt py-20 px-4">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <div className="border-l-4 border-gold pl-6 py-4">

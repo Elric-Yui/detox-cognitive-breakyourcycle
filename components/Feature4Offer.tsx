@@ -273,7 +273,7 @@ export default function Feature4Offer() {
       </div>
 
       {/* TEXTE EXCLUSIVITÉ */}
-      <div className="py-16 px-4 bg-bg text-center">
+      <div className="py-20 px-4 bg-bg text-center">
         <div className="max-w-2xl mx-auto">
           <FadeIn>
             <p className="font-sans text-base text-muted leading-relaxed mb-5">
