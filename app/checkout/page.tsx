@@ -136,7 +136,7 @@ export default function CheckoutPage() {
         {/* ── COLONNE DROITE : checkout embed ── */}
         <div className="lg:sticky lg:top-8 h-fit">
           <WhopCheckoutEmbed
-            planId="plan_U3s7jdRc2Hobl"
+            planId={process.env.NEXT_PUBLIC_WHOP_PLAN_ID!}
             skipRedirect={true}
             onComplete={() => router.push("/merci")}
             theme="dark"
