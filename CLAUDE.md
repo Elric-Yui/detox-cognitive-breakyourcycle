@@ -70,7 +70,7 @@ detox-app/
 
 ---
 
-## État actuel de chaque section (session 2)
+## État actuel de chaque section (session 3)
 
 ### Feature 1 — Hero & Accroche (`Feature1Hero.tsx`) ✅ Révisée
 - Titre : "INFJ/INFP : Votre Cerveau N'est Pas Cassé. Il Est Mal Calibré Pour Les Relations Toxiques."
@@ -189,19 +189,43 @@ npm run start      # Preview du build
 - **Publish directory** : `.next`
 - **Plugin** : `@netlify/plugin-nextjs` (installé en devDependency)
 - **Node** : 18 (spécifié dans `netlify.toml`)
-- **Variable d'env à maintenir** : `NEXT_PUBLIC_SITE_URL` = URL Netlify du site
+- **URL production** : `https://breakyourcycle.netlify.app`
+- **Variable d'env à maintenir** : `NEXT_PUBLIC_SITE_URL=https://breakyourcycle.netlify.app` (aussi à setter dans Netlify dashboard)
 - **Redirection post-paiement** : 100% client-side (`skipRedirect + onComplete → router.push("/merci")`) — pas de `returnUrl` Whop à configurer
+
+## Variables d'environnement (.env.local — ne jamais committer)
+
+| Variable | Valeur | Exposée browser ? |
+|---|---|---|
+| `NEXT_PUBLIC_WHOP_PLAN_ID` | `plan_U3s7jdRc2Hobl` | Oui (intentionnel) |
+| `NEXT_PUBLIC_SITE_URL` | `https://breakyourcycle.netlify.app` | Oui (intentionnel) |
+| `WHOP_WEBHOOK_SECRET` | `ws_c10...` (secret) | Non (server-side only) |
+
+**Sur Netlify** : setter `NEXT_PUBLIC_SITE_URL` et `WHOP_WEBHOOK_SECRET` dans Site Settings → Environment Variables.
 
 ---
 
 ## TODO prioritaires pour la prochaine session
 
+### Contenu page
 - [ ] **Feature5Choice.tsx** — réviser tous les textes (choix final, futur 18 mois, FAQ, footer)
 - [ ] Remplacer les placeholders images (hero 16:9, mockup livre, og-image)
 - [ ] Mettre à jour le prix barré dans Feature5 (était 107€, maintenant 117€)
 - [ ] Vérifier cohérence des prix sur toute la page (47€ / 117€ barré)
 - [ ] Tester responsive mobile (375px, 768px, 1280px)
 - [ ] Ajouter Google Analytics / Meta Pixel si besoin
+
+### Intégration Kit (ConvertKit) — webhook
+- [ ] Implémenter le TODO dans `app/api/whop-webhook/route.ts` ligne 34
+- [ ] Au paiement confirmé : ajouter subscriber Kit + tag + déclencher séquence email
+- [ ] Whop ne communique PAS avec les acheteurs (désactivé) — Kit est le seul canal
+- [ ] Besoin avant d'implémenter : Kit API key, tag ID, sequence ID
+- [ ] Ajouter `KIT_API_KEY` dans `.env.local` et dans Netlify env vars
+
+### Déploiement
+- [ ] Setter `WHOP_WEBHOOK_SECRET` dans Netlify → Site Settings → Environment Variables
+- [ ] Setter `NEXT_PUBLIC_SITE_URL=https://breakyourcycle.netlify.app` dans Netlify env vars
+- [ ] Configurer l'URL du webhook dans le dashboard Whop : `https://breakyourcycle.netlify.app/api/whop-webhook`
 
 ---
 
