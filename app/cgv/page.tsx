@@ -134,7 +134,7 @@ export default function CGVPage() {
           {/* Article 12 */}
           <div>
             <h2 className="font-serif text-xl font-bold text-cream mb-3">Article 12 — Données personnelles</h2>
-            <p>Les données collectées dans le cadre des commandes sont traitées conformément à la Politique de Confidentialité du site (page dédiée). Le client dispose des droits d&apos;accès, rectification, suppression et portabilité. Pour exercer ces droits : <span className="text-cream font-semibold">[lien vers la politique de confidentialité]</span>.</p>
+            <p>Les données collectées dans le cadre des commandes sont traitées conformément à la <a href="/confidentialite" className="text-gold underline hover:text-gold/80">Politique de Confidentialité</a> du site. Le client dispose des droits d&apos;accès, rectification, suppression et portabilité. Pour exercer ces droits : <a href="/confidentialite" className="text-gold underline hover:text-gold/80">consulter notre Politique de Confidentialité</a>.</p>
           </div>
 
           {/* Article 13 */}
