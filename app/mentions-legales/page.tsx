@@ -32,7 +32,7 @@ export default function MentionsLegalesPage() {
               <li><span className="text-cream font-semibold">État d&apos;enregistrement :</span> Wyoming</li>
               <li><span className="text-cream font-semibold">Adresse du siège social / adresse de service :</span> 30 N Gould St, STE R, Sheridan, WY 82801, USA</li>
               <li><span className="text-cream font-semibold">Registered agent / Agent enregistré :</span> 30 N Gould St, STE R, Sheridan, WY 82801, USA</li>
-              <li><span className="text-cream font-semibold">Contact (email) :</span> [contact@exemple.com]</li>
+              <li><span className="text-cream font-semibold">Contact (email) :</span> breakyourcycle@thaumazeinhq.com</li>
             </ul>
           </div>
 
@@ -91,7 +91,7 @@ export default function MentionsLegalesPage() {
           {/* Données personnelles */}
           <div>
             <h2 className="font-serif text-xl font-bold text-cream mb-3">Données personnelles</h2>
-            <p>Les traitements de données personnelles sont décrits dans la <a href="/confidentialite" className="text-gold underline hover:text-gold/80">Politique de confidentialité</a> du site. Conformément aux lois applicables, les utilisateurs disposent de droits d&apos;accès, de rectification, d&apos;effacement et de limitation. Pour exercer ces droits : contacter [contact@exemple.com].</p>
+            <p>Les traitements de données personnelles sont décrits dans la <a href="/confidentialite" className="text-gold underline hover:text-gold/80">Politique de confidentialité</a> du site. Conformément aux lois applicables, les utilisateurs disposent de droits d&apos;accès, de rectification, d&apos;effacement et de limitation. Pour exercer ces droits : contacter breakyourcycle@thaumazeinhq.com.</p>
           </div>
 
           <hr className="border-white/10" />
@@ -123,7 +123,7 @@ export default function MentionsLegalesPage() {
           {/* Accessibilité */}
           <div>
             <h2 className="font-serif text-xl font-bold text-cream mb-3">Accessibilité</h2>
-            <p>La Société s&apos;efforce de rendre le site accessible. En cas de difficultés d&apos;accès, l&apos;utilisateur peut contacter le support à [contact@exemple.com] pour obtenir une assistance.</p>
+            <p>La Société s&apos;efforce de rendre le site accessible. En cas de difficultés d&apos;accès, l&apos;utilisateur peut contacter le support à breakyourcycle@thaumazeinhq.com pour obtenir une assistance.</p>
           </div>
 
           <hr className="border-white/10" />

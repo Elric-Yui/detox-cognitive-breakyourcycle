@@ -38,7 +38,7 @@ export default function CGVPage() {
               <li>Nom de l&apos;éditeur : <span className="text-cream font-semibold">THAUMAZEIN</span></li>
               <li>Forme juridique : <span className="text-cream font-semibold">LLC</span></li>
               <li>Siège social : <span className="text-cream font-semibold">30 N Gould St, STE R, Sheridan, WY 82801, USA</span></li>
-              <li>Email : <span className="text-cream font-semibold">[EMAIL]</span></li>
+              <li>Email : <span className="text-cream font-semibold">breakyourcycle@thaumazeinhq.com</span></li>
               <li>Hébergeur du site : <span className="text-cream font-semibold">Netlify, Inc. 2325 3rd Street, Suite 296 San Francisco, CA 94107 United States Site web : <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer" className="text-gold underline hover:text-gold/80">https://www.netlify.com</a> Contact : support@netlify.com</span>.</li>
             </ol>
           </div>
@@ -102,7 +102,7 @@ export default function CGVPage() {
             <ol className="list-decimal list-inside flex flex-col gap-2">
               <li>Conformément au droit applicable, le consommateur dispose d&apos;un délai de <span className="text-cream font-semibold">14 jours</span> pour exercer son droit de rétractation pour les achats à distance (sauf exceptions). (<a href="https://www.economie.gouv.fr/particuliers/mes-droits-conso/bien-consommer/vente-distance-tout-savoir-sur-votre-droit-de-retractation" target="_blank" rel="noopener noreferrer" className="text-gold underline hover:text-gold/80">economie.gouv.fr</a>)</li>
               <li>Exceptions : le droit de rétractation ne s&apos;applique pas, ou peut être perdu, pour certains services/digital goods si l&apos;exécution a commencé et que le consommateur en a donné son accord exprès et renoncé à son droit de rétractation (ex. : téléchargement/accès immédiat à un contenu numérique). Cette règle est rappelée avant la confirmation de commande. (<a href="https://www.economie.gouv.fr/particuliers/mes-droits-conso/bien-consommer/vente-distance-tout-savoir-sur-votre-droit-de-retractation" target="_blank" rel="noopener noreferrer" className="text-gold underline hover:text-gold/80">economie.gouv.fr</a>)</li>
-              <li>Modalités d&apos;exercice : le client doit notifier sa décision au moyen d&apos;une déclaration claire (email à <span className="text-cream font-semibold">[EMAIL]</span>) ; l&apos;éditeur remboursera selon les modalités légales.</li>
+              <li>Modalités d&apos;exercice : le client doit notifier sa décision au moyen d&apos;une déclaration claire (email à <span className="text-cream font-semibold">breakyourcycle@thaumazeinhq.com</span>) ; l&apos;éditeur remboursera selon les modalités légales.</li>
             </ol>
           </div>
 
@@ -173,7 +173,7 @@ export default function CGVPage() {
           {/* Article 18 */}
           <div>
             <h2 className="font-serif text-xl font-bold text-cream mb-3">Article 18 — Contact</h2>
-            <p>Service client : <span className="text-cream font-semibold">[EMAIL]</span> — <span className="text-cream font-semibold">[TÉLÉPHONE]</span></p>
+            <p>Service client : <span className="text-cream font-semibold">breakyourcycle@thaumazeinhq.com</span> — <span className="text-cream font-semibold">[TÉLÉPHONE]</span></p>
             <p>Adresse : <span className="text-cream font-semibold">30 N Gould St, STE R, Sheridan, WY 82801, USA</span></p>
           </div>
 

@@ -340,10 +340,10 @@ export default function Feature5Choice() {
                 Mentions Légales
               </a>
               <a
-                href="mailto:contact@breakyourcycle.com"
+                href="mailto:breakyourcycle@thaumazeinhq.com"
                 className="font-sans text-xs text-gold hover:text-gold/80 transition-colors"
               >
-                contact@breakyourcycle.com
+                breakyourcycle@thaumazeinhq.com
               </a>
             </div>
           </div>

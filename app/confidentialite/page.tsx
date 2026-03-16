@@ -27,7 +27,7 @@ export default function ConfidentialitePage() {
           {/* 1 */}
           <div>
             <h2 className="font-serif text-xl font-bold text-cream mb-3">1. Responsable du traitement</h2>
-            <p>Le responsable du traitement des données collectées via ce site est <span className="text-cream font-semibold">THAUMAZEIN LLC</span>, dont le siège social est situé à <span className="text-cream font-semibold">30 N Gould St, STE R, Sheridan, WY 82801, USA</span>, contact : <span className="text-cream font-semibold">[EMAIL]</span> — <span className="text-cream font-semibold">[TÉLÉPHONE]</span>.</p>
+            <p>Le responsable du traitement des données collectées via ce site est <span className="text-cream font-semibold">THAUMAZEIN LLC</span>, dont le siège social est situé à <span className="text-cream font-semibold">30 N Gould St, STE R, Sheridan, WY 82801, USA</span>, contact : <span className="text-cream font-semibold">breakyourcycle@thaumazeinhq.com</span> — <span className="text-cream font-semibold">[TÉLÉPHONE]</span>.</p>
           </div>
 
           {/* 2 */}
@@ -121,7 +121,7 @@ export default function ConfidentialitePage() {
               <li>Droit à la portabilité des données (quand applicable).</li>
               <li>Droit de retirer votre consentement à tout moment (sans affecter la licéité du traitement antérieur).</li>
             </ul>
-            <p className="mt-3">Pour exercer ces droits : envoyez une demande à <span className="text-cream font-semibold">[EMAIL]</span> en précisant votre nom, l&apos;adresse e-mail utilisée et la nature de la demande. Nous répondrons dans les délais légaux.</p>
+            <p className="mt-3">Pour exercer ces droits : envoyez une demande à <span className="text-cream font-semibold">breakyourcycle@thaumazeinhq.com</span> en précisant votre nom, l&apos;adresse e-mail utilisée et la nature de la demande. Nous répondrons dans les délais légaux.</p>
           </div>
 
           {/* 12 */}
@@ -147,7 +147,7 @@ export default function ConfidentialitePage() {
             <h2 className="font-serif text-xl font-bold text-cream mb-3">15. Contact</h2>
             <p>Pour toute question sur cette politique ou l&apos;exercice de vos droits :</p>
             <p className="mt-2"><span className="text-cream font-semibold">Responsable :</span> THAUMAZEIN LLC</p>
-            <p><span className="text-cream font-semibold">E-mail :</span> [EMAIL]</p>
+            <p><span className="text-cream font-semibold">E-mail :</span> breakyourcycle@thaumazeinhq.com</p>
             <p><span className="text-cream font-semibold">Adresse :</span> 30 N Gould St, STE R, Sheridan, WY 82801, USA</p>
           </div>
 
