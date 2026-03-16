@@ -45,15 +45,13 @@ export default function CheckoutPage() {
         {/* ── COLONNE GAUCHE ── */}
         <div className="flex flex-col gap-8">
 
-          {/* Image produit — PERSONNALISER : remplacer par une vraie image */}
-          <div className="w-full aspect-video rounded-2xl bg-gradient-to-br from-violet to-bg border border-gold/30 flex items-center justify-center shadow-[0_20px_60px_rgba(123,79,191,0.25)]">
-            {/* PERSONNALISER : <Image src="/images/produit.png" alt="DÉTOX COGNITIVE" fill className="object-cover rounded-2xl" /> */}
-            <div className="text-center p-6">
-              <p className="font-serif text-2xl font-black text-gold leading-tight">DÉTOX</p>
-              <p className="font-serif text-2xl font-black text-gold leading-tight">COGNITIVE</p>
-              <div className="w-12 h-px bg-gold/40 mx-auto my-3" />
-              <p className="font-sans text-xs text-cream/60 uppercase tracking-widest">INFJ / INFP</p>
-            </div>
+          {/* Bannière produit */}
+          <div className="w-full rounded-2xl overflow-hidden border border-gold/30 shadow-[0_20px_60px_rgba(123,79,191,0.25)]">
+            <img
+              src="/images/checkout-banner.jpg"
+              alt="DÉTOX COGNITIVE : Diagnostic et Recalibrage pour INFJ/INFP — By Break Your Cycle"
+              className="w-full h-auto"
+            />
           </div>
 
           {/* Titre produit */}

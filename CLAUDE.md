@@ -31,7 +31,10 @@ detox-app/
 ├── app/
 │   ├── page.tsx              ← Assemblage des 5 sections (Feature1 → Feature5)
 │   ├── layout.tsx            ← Meta SEO, Google Fonts (Playfair + Inter), html lang="fr"
-│   └── globals.css           ← Variables CSS palette, reset, scrollbar custom
+│   ├── globals.css           ← Variables CSS palette, reset, scrollbar custom
+│   ├── cgv/page.tsx          ← Conditions Générales de Vente
+│   ├── confidentialite/page.tsx ← Politique de Confidentialité
+│   └── mentions-legales/page.tsx ← Mentions Légales
 ├── components/
 │   ├── Feature1Hero.tsx      ← Hero + empathie + science + 3 éléments cruciaux
 │   ├── Feature2Story.tsx     ← Transition DBR + story complète BreakYourCycle
@@ -44,7 +47,11 @@ detox-app/
 │       └── FadeIn.tsx        ← Wrapper scroll-triggered (opacity 0→1, y 24→0)
 ├── public/
 │   └── images/
-│       └── og-image.png      ← Placeholder (à remplacer par une vraie image OG)
+│       ├── hero.jpg           ← Image hero (femme, reflets de lumière)
+│       ├── mockup-book.png    ← Mockup 3D du livre DÉTOX COGNITIVE
+│       ├── checkout-banner.jpg ← Bannière page checkout
+│       ├── guarantee-badge.png ← Badge "Satisfaction Guaranteed" BreakYourCycle
+│       └── og-image.png       ← Placeholder (à remplacer par une vraie image OG)
 ├── COMPOSANTS.txt            ← Guide de navigation des fichiers par section
 ├── tailwind.config.ts
 ├── next.config.mjs
@@ -70,9 +77,10 @@ detox-app/
 
 ---
 
-## État actuel de chaque section (session 3)
+## État actuel de chaque section (session 4)
 
 ### Feature 1 — Hero & Accroche (`Feature1Hero.tsx`) ✅ Révisée
+- Image hero réelle ajoutée (`/images/hero.jpg`) — remplace le placeholder
 - Titre : "INFJ/INFP : Votre Cerveau N'est Pas Cassé. Il Est Mal Calibré Pour Les Relations Toxiques."
 - Sous-titre : méthode DBR méconnue mais scientifique
 - Intro empathique : référence au quiz passé, "vous êtes au bon endroit"
@@ -140,9 +148,20 @@ detox-app/
 - Rareté : 50 places
 - CTA Whop
 - Double garantie (14j légal + résultat)
+- Badge "Satisfaction Guaranteed" ajouté sous la garantie BreakYourCycle (`/images/guarantee-badge.png`)
+- Mockup livre réel ajouté (`/images/mockup-book.png`) — remplace les 2 placeholders (intro produit + box prix)
+- Box prix : image produit agrandie (45% / max 300px desktop)
+- Page checkout : bannière réelle ajoutée (`/images/checkout-banner.jpg`)
 
 ### Feature 5 — Choix Final & FAQ (`Feature5Choice.tsx`) ⏳ Non révisée
 - Structure initiale en place, textes à réviser dans session future
+- Références scientifiques en footer : 5 études cliquables (Acevedo, Young, Levine, Carnes, Nardi) → ouvrent dans un nouvel onglet
+- Footer : liens CGV, Politique de Confidentialité, Mentions Légales ajoutés
+
+### Pages légales ✅ Créées (session 4)
+- `/cgv` — Conditions Générales de Vente (depuis `CGV Breakyourcycle.md`)
+- `/confidentialite` — Politique de Confidentialité (depuis `politique de confidentialité.md`)
+- `/mentions-legales` — Mentions Légales (depuis `Mentions légales.md`)
 
 ---
 
@@ -208,12 +227,16 @@ npm run start      # Preview du build
 ## TODO prioritaires pour la prochaine session
 
 ### Contenu page
+- [x] Remplacer les placeholders images (hero, mockup livre, bannière checkout, badge garantie) ✅ session 4
+- [x] Ajouter pages légales (CGV, Politique de Confidentialité, Mentions Légales) ✅ session 4
+- [x] Liens études scientifiques cliquables dans le footer ✅ session 4
 - [ ] **Feature5Choice.tsx** — réviser tous les textes (choix final, futur 18 mois, FAQ, footer)
-- [ ] Remplacer les placeholders images (hero 16:9, mockup livre, og-image)
+- [ ] Remplacer og-image.png par une vraie image OG
 - [ ] Mettre à jour le prix barré dans Feature5 (était 107€, maintenant 117€)
 - [ ] Vérifier cohérence des prix sur toute la page (47€ / 117€ barré)
 - [ ] Tester responsive mobile (375px, 768px, 1280px)
 - [ ] Ajouter Google Analytics / Meta Pixel si besoin
+- [ ] Remplacer les placeholders [EMAIL] et [TÉLÉPHONE] dans les pages légales
 
 ### Intégration Kit (ConvertKit) — webhook
 - [ ] Implémenter le TODO dans `app/api/whop-webhook/route.ts` ligne 34

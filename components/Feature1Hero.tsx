@@ -81,19 +81,14 @@ export default function Feature1Hero() {
           </p>
         </FadeIn>
 
-        {/* Hero image placeholder */}
+        {/* Hero image */}
         <FadeIn delay={0.4} className="w-full max-w-3xl mx-auto mt-16">
-          <div className="w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-bg-alt flex items-center justify-center">
-            <div className="text-center text-muted">
-              <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-white/5 flex items-center justify-center">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-gold">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <polyline points="21 15 16 10 5 21" />
-                </svg>
-              </div>
-              <p className="text-sm">Image hero — femme dans un paysage de nuit</p>
-            </div>
+          <div className="w-full aspect-video rounded-xl overflow-hidden border border-white/10">
+            <img
+              src="/images/hero.jpg"
+              alt="Visage de femme avec des reflets de lumière et de fleurs"
+              className="w-full h-full object-cover"
+            />
           </div>
         </FadeIn>
       </div>

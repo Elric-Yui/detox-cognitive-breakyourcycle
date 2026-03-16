@@ -112,21 +112,14 @@ export default function Feature4Offer() {
             </p>
           </FadeIn>
 
-          {/* Book mockup placeholder */}
+          {/* Book mockup */}
           <FadeIn delay={0.1}>
-            <div className="w-48 h-64 mx-auto bg-gradient-to-br from-violet to-bg border border-gold/30 rounded-lg flex items-center justify-center shadow-[0_20px_60px_rgba(123,79,191,0.3)]">
-              <div className="text-center p-4">
-                <p className="font-serif text-sm font-bold text-gold leading-tight">
-                  DÉTOX
-                </p>
-                <p className="font-serif text-xs font-bold text-gold leading-tight">
-                  COGNITIVE
-                </p>
-                <div className="w-8 h-px bg-gold/50 mx-auto my-2" />
-                <p className="font-sans text-xs text-cream/70">
-                  INFJ / INFP
-                </p>
-              </div>
+            <div className="w-56 md:w-64 mx-auto">
+              <img
+                src="/images/mockup-book.png"
+                alt="DÉTOX COGNITIVE : Diagnostic et Recalibrage pour INFJ et INFP"
+                className="w-full h-auto drop-shadow-[0_20px_60px_rgba(123,79,191,0.3)]"
+              />
             </div>
           </FadeIn>
 
@@ -590,6 +583,13 @@ export default function Feature4Offer() {
                   <span className="text-gold font-semibold">1 mois</span>, je vous rembourse la{" "}
                   <span className="text-cream font-semibold">totalité du prix</span> — et vous pouvez même garder le guide.
                 </p>
+                <div className="flex justify-center mt-6">
+                  <img
+                    src="/images/guarantee-badge.png"
+                    alt="BreakYourCycle — Satisfaction Guaranteed"
+                    className="w-28 md:w-36 h-auto"
+                  />
+                </div>
               </div>
 
               {/* Phrase finale choc */}
@@ -610,22 +610,20 @@ export default function Feature4Offer() {
               {/* Contenu principal : image + séparateur + détails */}
               <div className="flex flex-col md:flex-row">
 
-                {/* Placeholder image produit */}
-                <div className="md:w-2/5 bg-bg flex items-center justify-center p-8 md:p-12 min-h-[280px] md:min-h-[420px]">
-                  <div className="w-full max-w-[180px] md:max-w-[220px] aspect-[3/4] rounded-xl border-2 border-dashed border-violet/40 flex flex-col items-center justify-center gap-3 text-center">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-violet/50">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <path d="M3 9h18M9 21V9" />
-                    </svg>
-                    <span className="font-sans text-xs text-muted/50 px-2">Image du produit</span>
-                  </div>
+                {/* Image produit */}
+                <div className="md:w-[45%] bg-bg flex items-center justify-center p-8 md:p-14 min-h-[280px] md:min-h-[480px]">
+                  <img
+                    src="/images/mockup-book.png"
+                    alt="DÉTOX COGNITIVE : Diagnostic et Recalibrage pour INFJ et INFP"
+                    className="w-full max-w-[220px] md:max-w-[300px] h-auto drop-shadow-[0_10px_30px_rgba(123,79,191,0.3)]"
+                  />
                 </div>
 
                 {/* Séparateur vertical */}
                 <div className="hidden md:block w-px bg-violet/20 my-8" />
 
                 {/* Contenu texte */}
-                <div className="md:w-3/5 p-6 md:p-10 md:py-12">
+                <div className="md:w-[55%] p-6 md:p-10 md:py-12">
                   <p className="font-serif text-base md:text-lg font-bold text-gold mb-5 md:mb-6 tracking-wide">
                     Ce que vous obtiendrez :
                   </p>

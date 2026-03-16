@@ -73,11 +73,11 @@ const faqItems = [
 ];
 
 const scientificLinks = [
-  "Acevedo, B.P. et al. (2014). The highly sensitive brain. Brain and Behavior.",
-  "Young, J.E. (2003). Schema Therapy: A Practitioner's Guide. Guilford Press.",
-  "Levine, P. (1997). Waking the Tiger: Healing Trauma. North Atlantic Books.",
-  "Carnes, P. (1997). The Betrayal Bond. Health Communications.",
-  "Nardi, D. (2011). Neuroscience of Personality. Radiance House.",
+  { text: "Acevedo, B.P. et al. (2014). The highly sensitive brain. Brain and Behavior.", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4086365/" },
+  { text: "Young, J.E. (2003). Schema Therapy: A Practitioner's Guide. Guilford Press.", url: "https://www.guilford.com/books/Schema-Therapy/Young-Klosko-Weishaar/9781462520030" },
+  { text: "Levine, P. (1997). Waking the Tiger: Healing Trauma. North Atlantic Books.", url: "https://books.google.com/books?id=vCh9fXUiUjwC" },
+  { text: "Carnes, P. (1997). The Betrayal Bond. Health Communications.", url: "https://books.google.com/books?id=Dg-CDwAAQBAJ" },
+  { text: "Nardi, D. (2011). Neuroscience of Personality. Radiance House.", url: "https://dokumen.pub/neuroscience-of-personality-brain-savvy-insights-for-all-types-of-people-10nbsped-0979868475-9780979868474.html" },
 ];
 
 export default function Feature5Choice() {
@@ -304,7 +304,13 @@ export default function Feature5Choice() {
                   key={i}
                   className="font-sans text-xs text-muted/60 leading-relaxed"
                 >
-                  {link}
+                  {link.url ? (
+                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gold transition-colors">
+                      {link.text}
+                    </a>
+                  ) : (
+                    link.text
+                  )}
                 </li>
               ))}
             </ul>
@@ -314,12 +320,32 @@ export default function Feature5Choice() {
             <p className="font-sans text-xs text-muted/50">
               © 2026 BreakYourCycle. Tous droits réservés.
             </p>
-            <a
-              href="mailto:contact@breakyourcycle.com"
-              className="font-sans text-xs text-gold hover:text-gold/80 transition-colors"
-            >
-              contact@breakyourcycle.com
-            </a>
+            <div className="flex items-center gap-6">
+              <a
+                href="/cgv"
+                className="font-sans text-xs text-muted/50 hover:text-gold transition-colors"
+              >
+                Conditions Générales de Vente
+              </a>
+              <a
+                href="/confidentialite"
+                className="font-sans text-xs text-muted/50 hover:text-gold transition-colors"
+              >
+                Politique de Confidentialité
+              </a>
+              <a
+                href="/mentions-legales"
+                className="font-sans text-xs text-muted/50 hover:text-gold transition-colors"
+              >
+                Mentions Légales
+              </a>
+              <a
+                href="mailto:contact@breakyourcycle.com"
+                className="font-sans text-xs text-gold hover:text-gold/80 transition-colors"
+              >
+                contact@breakyourcycle.com
+              </a>
+            </div>
           </div>
         </div>
       </footer>
