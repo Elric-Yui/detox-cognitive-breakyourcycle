@@ -31,8 +31,32 @@ export async function POST(req: NextRequest) {
 
   // Handle successful payment
   if (event.action === "payment.succeeded" || event.action === "membership.went_valid") {
-    // TODO: Grant access — e.g. send confirmation email, update DB, etc.
-    console.log("Payment confirmed for:", event.data?.user_id ?? event.data?.id);
+    const email = event.data?.email ?? event.data?.user?.email;
+    const userId = event.data?.user_id ?? event.data?.id;
+
+    console.log("Payment confirmed for:", userId, "email:", email);
+
+    // Forward buyer email to Make.com webhook
+    const makeWebhookUrl = process.env.MAKE_WEBHOOK_URL;
+    if (makeWebhookUrl && email) {
+      try {
+        await fetch(makeWebhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email,
+            user_id: userId,
+            event: event.action,
+            timestamp: new Date().toISOString(),
+          }),
+        });
+        console.log("Make.com webhook sent for:", email);
+      } catch (err) {
+        console.error("Failed to send Make.com webhook:", err);
+      }
+    } else if (!makeWebhookUrl) {
+      console.warn("MAKE_WEBHOOK_URL is not set — skipping Make.com webhook");
+    }
   }
 
   return NextResponse.json({ received: true });
